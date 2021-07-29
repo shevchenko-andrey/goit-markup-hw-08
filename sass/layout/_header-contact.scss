@@ -1,0 +1,34 @@
+.contact {
+  @include flex-center();
+  margin-left: auto;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  &__item {
+    @include flex-center();
+  }
+
+  &__item:not(:first-child) {
+    margin-left: 50px;
+  }
+  &__icons {
+    margin-right: 10px;
+  }
+}
+
+.contact__link {
+  @include flex-center();
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--master-text-color);
+  fill: var(--master-text-color);
+  transition: color var(--transformation-time), var(--time-allocation-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    fill: var(--accent-color);
+  }
+}

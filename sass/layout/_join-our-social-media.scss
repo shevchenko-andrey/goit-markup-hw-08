@@ -1,0 +1,16 @@
+.our-social-media {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-top: 12px;
+  &__join {
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: var(--master-leter-spacing);
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+  }
+}

@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity var(--transformation-time) var(--time-allocation-function),
+    visibility var(--transformation-time) var(--time-allocation-function);
+}
+.modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: var(--secondary-text-color);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+.modal__close-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 7px;
+  right: 8px;
+
+  @include flex-center();
+  padding: 0;
+
+  background-color: var(--secondary-text-color);
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  transition: box-shadow var(--transformation-time)
+      var(--time-allocation-function),
+    fill var(--transformation-time) var(--time-allocation-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+  &:active {
+    box-shadow: 0px 2px 1px 0px #7e5a5a33, 0px 1px 1px 0px #00000024,
+      0px 1px 3px 0px #0000001f;
+  }
+}

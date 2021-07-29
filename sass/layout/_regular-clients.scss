@@ -1,0 +1,26 @@
+.regular-clients {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--basic-content-indentation));
+  }
+  &__item {
+    margin-left: var(--basic-content-indentation);
+  }
+}
+
+.regular-clients__link {
+  @include flex-center();
+  fill: #afb1b8;
+  width: 170px;
+  height: 92px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: fill var(--transformation-time) var(--time-allocation-function),
+    background-color var(--transformation-time) var(--time-allocation-function);
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}

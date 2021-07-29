@@ -1,0 +1,40 @@
+.filter {
+  @include flex-center();
+  margin-left: -8px;
+  margin-bottom: 50px;
+}
+.filter__button {
+  margin-left: 8px;
+  padding: 6px 22px;
+
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: var(--master-leter-spacing);
+  color: var(--master-title-color);
+  background-color: #f5f4fa;
+  transition: color var(--transformation-time) var(--time-allocation-function),
+    background-color var(--transformation-time) var(--time-allocation-function),
+    box-shadow var(--transformation-time) var(--time-allocation-function);
+  &:hover,
+  &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--accent-color);
+    box-shadow: 0px 2px 2px 0px #0000001f;
+
+    box-shadow: 0px 1px 2px 0px #00000014;
+
+    box-shadow: 0px 3px 1px 0px #0000001a;
+  }
+}
+.active {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  transition: color var(--transformation-time) var(--time-allocation-function),
+    background-color var(--transformation-time) var(--time-allocation-function),
+    box-shadow var(--transformation-time) var(--time-allocation-function);
+}

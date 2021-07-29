@@ -1,0 +1,20 @@
+.address {
+  &__item:not(:last-child) {
+    margin-bottom: 9px;
+  }
+}
+.address__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: var(--master-leter-spacing);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color var(--transformation-time) var(--time-allocation-function);
+  &--location {
+    color: var(--secondary-text-color);
+  }
+  &:hover {
+    color: var(--accent-color);
+  }
+}
