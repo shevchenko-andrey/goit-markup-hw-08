@@ -20,6 +20,15 @@
     text-transform: uppercase;
     color: var(--secondary-text-color);
   }
+  @media screen and (min-devise-pixel-radio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../images/tablet/bg-main@2x.jpg);
+  }
 }
 
 .hero__button {
