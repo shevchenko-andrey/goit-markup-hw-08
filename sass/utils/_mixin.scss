@@ -41,3 +41,10 @@
   align-items: $al;
   justify-content: $jc;
 }
+@mixin retina($image, $width) {
+  @media screen and (min-device-pixel-ratio: 2) and (min-width: $width),
+    screen and (min-resolution: 192dpi) and (min-width: $width),
+    screen and (min-resolution: 2dppx) and (min-width: $width) {
+    background-image: url($image);
+  }
+}
