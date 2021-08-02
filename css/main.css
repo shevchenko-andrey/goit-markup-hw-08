@@ -11,6 +11,25 @@
   --time-allocation-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 h1,
 h2,
 h3,
@@ -81,6 +100,16 @@ body {
   .container {
     width: 1200px;
   }
+}
+
+.section-title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: var(--master-leter-spacing);
+  color: var(--master-title-color);
 }
 
 .hero {
@@ -162,5 +191,72 @@ body {
 
 .hero__button:hover, .hero__button:focus {
   background-color: #188ce8;
+}
+
+@media screen and (min-width: 768px) {
+  .company-features__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    align-items: stretch;
+    margin-left: calc(-1 * var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .company-features__item {
+    margin-left: 30px;
+    flex-basis: calc((100% / 2) - var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .company-features__item {
+    margin-left: 30px;
+    flex-basis: calc((100% / 4) - var(--basic-content-indentation));
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .company-features__item:not(:last-child) {
+    margin-bottom: var(--basic-content-indentation);
+  }
+}
+
+.company-features__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--basic-content-indentation);
+  height: 120px;
+  border: none;
+  border-radius: 4px;
+  background: #f5f4fa;
+}
+
+.company-features__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: var(--master-leter-spacing);
+  text-transform: uppercase;
+  color: var(--master-title-color);
+}
+
+@media screen and (max-width: 767px) {
+  .company-features__title {
+    text-align: center;
+  }
+}
+
+.company-features__description {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  letter-spacing: var(--master-leter-spacing);
+  color: var(--master-text-color);
 }
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,26 @@
 .company-features {
   &__list {
-    @include flex-center();
-    margin-left: calc(-1 * var(--basic-content-indentation));
+    @media screen and (min-width: 768px) {
+      @include flex-center();
+      align-items: stretch;
+      margin-left: calc(-1 * var(--basic-content-indentation));
+    }
   }
 
   &__item {
-    margin-left: 30px;
-    flex-basis: calc(100% / 4 - var(--basic-content-indentation));
+    @media screen and (min-width: 768px) {
+      margin-left: 30px;
+      flex-basis: calc((100% / 2) - var(--basic-content-indentation));
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 30px;
+      flex-basis: calc((100% / 4) - var(--basic-content-indentation));
+    }
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 1199px) {
+      margin-bottom: var(--basic-content-indentation);
+    }
   }
   &__wrapper {
     @include flex-center();
@@ -24,10 +38,12 @@
     letter-spacing: var(--master-leter-spacing);
     text-transform: uppercase;
     color: var(--master-title-color);
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
   &__description {
-    font-size: 14px;
-    line-height: 1.71;
+    @include font(14px, 400, 24px);
     letter-spacing: var(--master-leter-spacing);
     color: var(--master-text-color);
   }

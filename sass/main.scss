@@ -1,13 +1,13 @@
 //UTILS
 @import "./utils/variables";
 @import "./utils/mixin";
-// @import "./utils/visually-hidden";
-// @import "./utils/is-hidden";
+@import "./utils/visually-hidden";
+@import "./utils/is-hidden";
 //BASE
 @import "./base/common";
 @import "./base/container";
 // COMPONENTS
-// @import "./components/section-title";
+@import "./components/section-title";
 // @import "./components/social-media";
 // LAYOUT
 // =====>STUDIO
@@ -15,7 +15,7 @@
 // @import "./layout/header-nav";
 // @import "./layout/header-contact";
 @import "./layout/hero";
-// @import "./layout/features-company";
+@import "./layout/features-company";
 // @import "./layout/servises";
 // @import "./layout/team";
 // @import "./layout/regular-clients";
