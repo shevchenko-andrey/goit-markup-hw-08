@@ -172,11 +172,53 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="list team__list">
             <li class="team__item">
-              <img
-                src="./images/team/igor-demyanenko.jpg"
-                alt="Фотография Игоря"
-              />
-              <div class="team__card">
+              <picture>
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images\deckstope\team\demyanenko.webp    1x,
+                    ./images\deckstope\team\demyanenko@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width:1200px )"
+                  srcset="
+                    ./images\deckstope\team\demyanenko.jpg    1x,
+                    ./images\deckstope\team\demyanenko@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images\tablet\team\demyanenko@2x.webp 1x,
+                    ./images\tablet\team\demyanenko@2x.webp
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width:768px )"
+                  srcset="
+                    ./images\tablet\team\demyanenko.jpg    1x,
+                    ./images\tablet\team\demyanenko@2x.jpg 2x
+                  " />
+                <source
+                  media="(max-width:767px )"
+                  srcset="
+                    ./images\mobile\team\demyanenko.webp     1x,
+                    ./images\mobile\team\demyanenko@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(max-width:767px )"
+                  srcset="
+                    ./images\mobile\team\demyanenko.jpg    1x,
+                    ./images\mobile\team\demyanenko@2x.jpg 2x
+                  " />
+
+                <img
+                  src="#"
+                  alt="Фотография Игоря"
+              /></picture>
+
+              <!-- <div class="team__card">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__profession" lang="en">Product Designer</p>
                 <ul class="social-media list">
@@ -437,7 +479,7 @@
                       </svg>
                     </a>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </li>
           </ul>
