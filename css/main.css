@@ -409,4 +409,52 @@ body {
   letter-spacing: var(--master-leter-spacing);
   color: var(--master-text-color);
 }
+
+.regular-clients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--basic-content-indentation));
+}
+
+.regular-clients__item {
+  min-width: 92px;
+  margin-left: var(--basic-content-indentation);
+  min-height: 92px;
+}
+
+@media screen and (max-width: 767px) {
+  .regular-clients__item {
+    flex-basis: calc((100% / 2) - var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .regular-clients__item {
+    flex-basis: calc((100% / 3) - var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .regular-clients__item {
+    flex-basis: calc((100% / 6) - var(--basic-content-indentation));
+  }
+}
+
+.regular-clients__link {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  fill: #afb1b8;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  transition: fill var(--transformation-time) var(--time-allocation-function), background-color var(--transformation-time) var(--time-allocation-function);
+}
+
+.regular-clients__link:hover, .regular-clients__link:focus {
+  fill: var(--accent-color);
+  border-color: var(--accent-color);
+}
 /*# sourceMappingURL=main.css.map */
