@@ -1,7 +1,17 @@
 .footer-form {
-  display: block;
-  margin-left: 93px;
-  margin-top: 12px;
+  @media screen and (min-width: 768px) {
+    margin: 60px auto 0px;
+  }
+  @media screen and(max-width: 1199px) {
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+    margin-left: 93px;
+    margin-top: 12px;
+  }
+
   &__head {
     margin-bottom: 20px;
     font-weight: 700;
@@ -12,18 +22,43 @@
     color: var(--secondary-text-color);
   }
   &__wrapper {
-    display: flex;
+    @media screen and (max-width: 767px) {
+      @include flex-center();
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
   }
   &__icon {
     margin-left: 10px;
     fill: white;
     background-color: none;
   }
+  &__label {
+    @media screen and (max-width: 767px) {
+      display: block;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      display: block;
+      min-width: 450px;
+      min-height: 50px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      min-width: 358px;
+      margin-bottom: 0px;
+    }
+  }
 }
 
 .footer-form__data-input {
+  display: block;
   padding: 15px 16px;
-  width: 358px;
+  width: 100%;
+  height: 100%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -36,6 +71,12 @@
   color: var(--secondary-text-color);
   transition: border-color var(--transformation-time)
     var(--time-allocation-function);
+  @media screen and (min-width: 768px) {
+    min-width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+  }
 
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
@@ -64,5 +105,15 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+  @media screen and (max-width: 767px) {
+    min-width: 200px;
+    min-height: 50px;
+  }
+  @media screen and (min-width: 768px) {
+    margin: 0 auto;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
   }
 }

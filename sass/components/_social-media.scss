@@ -14,6 +14,11 @@
   border-radius: 50%;
   transition: fill var(--transformation-time) var(--time-allocation-function),
     background-color var(--transformation-time) var(--time-allocation-function);
+  &:hover,
+  &:focus {
+    fill: var(--secondary-text-color);
+    background-color: var(--accent-color);
+  }
 
   &--theme--gray {
     fill: #afb1b8;
@@ -22,10 +27,8 @@
   &--theme--white {
     fill: var(--secondary-text-color);
     background: rgba(255, 255, 255, 0.1);
-  }
-  &:hover,
-  &:focus {
-    fill: var(--secondary-text-color);
-    background-color: var(--accent-color);
+    @media screen and (max-width: 767px) {
+      margin-bottom: 60px;
+    }
   }
 }

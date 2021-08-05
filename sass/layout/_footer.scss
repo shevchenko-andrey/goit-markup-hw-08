@@ -3,8 +3,28 @@
   padding-top: 60px;
   padding-bottom: 60px;
   &__container {
-  display: flex;
-  flex-wrap: wrap;
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    @media screen and (min-width: 1200px) {
+      margin: 0 auto;
+      text-align: start;
+    }
+  }
+  &__address-container {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
+    @media screen and (min-width: 768px) {
+      margin-left: 61px;
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: 0;
+    }
+  }
 }
-}
-

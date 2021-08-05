@@ -14,11 +14,14 @@
     padding-bottom: 25px;
   }
   &__footer {
-    display: inline-block;
+    display: block;
     margin-bottom: 20px;
 
     font-style: normal;
     font-weight: 700;
     color: var(--secondary-text-color);
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
   }
 }
