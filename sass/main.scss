@@ -12,8 +12,10 @@
 // LAYOUT
 // =====>STUDIO
 @import "./components/logo";
-// @import "./layout/header-nav";
-// @import "./layout/header-contact";
+@import "./layout/header-nav";
+@import "./layout/header-contact";
+@import "./layout/mobile-menu";
+@import "./utils/menu-is-open";
 @import "./layout/hero";
 @import "./layout/features-company";
 @import "./layout/servises";
@@ -24,13 +26,12 @@
 @import "./layout/join-our-social-media";
 @import "./layout/footer-form";
 // =====>MODAL
-// @import "./layout/modal/modal-windows";
+@import "./layout/modal/modal-windows";
 // @import "./layout/modal/modal-form";
 // @import "./layout/modal/modal-checkbox";
 // =====> PORTFOLIO
 // @import "./layout/filter";
 // @import "./layout/art-gallery";
-// @import "."
-// @import "."
+
 // @import "."
 // @import "."

@@ -3,35 +3,54 @@
 
   &__container {
     @include flex-center();
+    @media screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
+    @media screen and (min-width: 1200px) {
+      justify-content: center;
+    }
   }
 }
 .navigation {
-  @include flex-center();
+  @media screen and (min-width: 1200px) {
+    @include flex-center();
+  }
 
   &__menu {
-    @include flex-center();
-    margin-left: auto;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    @media screen and (min-width: 1200px) {
+      @include flex-center();
+      margin-left: auto;
+    }
   }
 
   &__item:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
   }
 
   &__item:first-child {
-    margin-left: 93px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 93px;
+    }
   }
 }
 
 .navigation__link {
-  @include flex-center();
   color: var(--master-title-color);
   padding-top: 32px;
   padding-bottom: 32px;
   transition: color var(--transformation-time) var(--time-allocation-function);
+  @media screen and (min-width: 1200px) {
+    @include flex-center();
+  }
 
   &:hover,
   &:focus {
@@ -53,5 +72,29 @@
     height: 4px;
     border-radius: 2px;
     background-color: var(--accent-color);
+  }
+}
+.burger-button {
+  display: block;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  padding: 0;
+  transition: fill var(--transformation-time) var(--time-allocation-function);
+
+  &__icon {
+    width: 40px;
+    height: 40px;
+
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }

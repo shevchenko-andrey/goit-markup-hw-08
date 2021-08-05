@@ -1,30 +1,49 @@
 .contact {
-  @include flex-center();
   margin-left: auto;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-
-  &__item {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  @media screen and (min-width: 768px) {
+    @include flex-center();
+  }
+  @media screen and (min-width: 1200px) {
     @include flex-center();
   }
 
+  &__item {
+    @media screen and (min-width: 768px) {
+      @include flex-center();
+    }
+    @media screen and (min-width: 1200px) {
+      @include flex-center();
+    }
+  }
+
   &__item:not(:first-child) {
-    margin-left: 50px;
+    @media screen and (min-width: 1200px) {
+      margin-left: 50px;
+    }
   }
   &__icons {
-    margin-right: 10px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+    }
   }
 }
 
 .contact__link {
-  @include flex-center();
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--master-text-color);
   fill: var(--master-text-color);
   transition: color var(--transformation-time), var(--time-allocation-function);
+  @media screen and (min-width: 1200px) {
+    @include flex-center();
+  }
 
   &:hover,
   &:focus {
