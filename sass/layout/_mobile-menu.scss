@@ -35,7 +35,7 @@
 
     &:hover,
     &:focus {
-      fill: var(--accent_color);
+      fill: var(--accent-color);
     }
   }
 }
@@ -50,7 +50,14 @@
   }
 
   &__link {
+    transition: color var(--transformation-time),
+      var(--time-allocation-function);
+
     color: var(--master-title-color);
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+    }
   }
 }
 
@@ -74,20 +81,25 @@
   }
 }
 .social-links {
+  position: relative;
   display: flex;
   align-items: center;
   &__item:not(:first-child) {
-    margin-left: 10px;
+    margin-left: 20px;
   }
 
+  &__item--decor:after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    width: 22px;
+    height: 0px;
+    border-bottom: 1px solid rgba(33, 33, 33, 0.2);
+    transform: rotate(90deg);
+  }
   &__link {
     @include font(18px, 500, 22px);
-    padding-right: 10px;
     letter-spacing: 0.02em;
     color: var(--accent-color);
-    border-right: 1px solid rgba(33, 33, 33, 0.2);
-  }
-  .social-links__item:last-child > &__link {
-    border-right: none;
   }
 }
