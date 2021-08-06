@@ -1,8 +1,23 @@
 .filter {
-  @include flex-center();
+  @include flex-center($jc: start);
   margin-left: -8px;
-  margin-bottom: 50px;
+  @media screen and (max-width: 767px) {
+    margin-bottom: -15px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
+  &__item {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 15px;
+    }
+  }
 }
+
 .filter__button {
   margin-left: 8px;
   padding: 6px 22px;

@@ -1,14 +1,33 @@
 .gallery {
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: calc(-1 * var(--basic-content-indentation));
-    margin-bottom: calc(-1 * var(--basic-content-indentation));
+    @media screen and (max-width: 767px) {
+      margin-top: 40px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--basic-content-indentation));
+      margin-bottom: calc(-1 * var(--basic-content-indentation));
+    }
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: calc(-1 * var(--basic-content-indentation));
+      margin-bottom: calc(-1 * var(--basic-content-indentation));
+    }
   }
   &__item {
-    margin-left: var(--basic-content-indentation);
-    margin-bottom: var(--basic-content-indentation);
-    flex-basis: calc(100% / 3 - var(--basic-content-indentation));
+    @media screen and (min-width: 768px) {
+      margin-left: var(--basic-content-indentation);
+      margin-bottom: var(--basic-content-indentation);
+      flex-basis: calc(100% / 2 - var(--basic-content-indentation));
+    }
+    @media screen and (min-width: 1200px) {
+      margin-left: var(--basic-content-indentation);
+      margin-bottom: var(--basic-content-indentation);
+      flex-basis: calc(100% / 3 - var(--basic-content-indentation));
+    }
 
     border: 1px solid #eeeeee;
   }

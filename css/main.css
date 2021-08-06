@@ -379,7 +379,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1199px) {
   .contact__item:first-child {
     margin-bottom: 10px;
   }
@@ -438,6 +438,7 @@ body {
 .mobile-menu {
   overflow: scroll;
   position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100vw;
@@ -1186,5 +1187,169 @@ body {
 
 .modal__close-btn:active {
   box-shadow: 0px 2px 1px 0px #7e5a5a33, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  margin-left: -8px;
+}
+
+@media screen and (max-width: 767px) {
+  .filter {
+    margin-bottom: -15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .filter {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .filter__item {
+    margin-bottom: 15px;
+  }
+}
+
+.filter__button {
+  margin-left: 8px;
+  padding: 6px 22px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: var(--main-font);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.63;
+  letter-spacing: var(--master-leter-spacing);
+  color: var(--master-title-color);
+  background-color: #f5f4fa;
+  transition: color var(--transformation-time) var(--time-allocation-function), background-color var(--transformation-time) var(--time-allocation-function), box-shadow var(--transformation-time) var(--time-allocation-function);
+}
+
+.filter__button:hover, .filter__button:focus {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px 0px #0000001f;
+  box-shadow: 0px 1px 2px 0px #00000014;
+  box-shadow: 0px 3px 1px 0px #0000001a;
+}
+
+.active {
+  color: var(--secondary-text-color);
+  background-color: var(--accent-color);
+  transition: color var(--transformation-time) var(--time-allocation-function), background-color var(--transformation-time) var(--time-allocation-function), box-shadow var(--transformation-time) var(--time-allocation-function);
+}
+
+@media screen and (max-width: 767px) {
+  .gallery__list {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--basic-content-indentation));
+    margin-bottom: calc(-1 * var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--basic-content-indentation));
+    margin-bottom: calc(-1 * var(--basic-content-indentation));
+  }
+}
+
+.gallery__item {
+  border: 1px solid #eeeeee;
+}
+
+@media screen and (min-width: 768px) {
+  .gallery__item {
+    margin-left: var(--basic-content-indentation);
+    margin-bottom: var(--basic-content-indentation);
+    flex-basis: calc(100% / 2 - var(--basic-content-indentation));
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .gallery__item {
+    margin-left: var(--basic-content-indentation);
+    margin-bottom: var(--basic-content-indentation);
+    flex-basis: calc(100% / 3 - var(--basic-content-indentation));
+  }
+}
+
+.gallery__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.gallery__card {
+  background-color: var(--secondary-text-color);
+  padding: 20px 24px;
+}
+
+.gallery__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--master-title-color);
+}
+
+.gallery__description {
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: var(--master-leter-spacing);
+  color: var(--master-text-color);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transform: translateY(100%);
+  padding: 63px 24px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--secondary-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+  transition: transform var(--transformation-time) var(--time-allocation-function);
+}
+
+.gallery__link:hover .overlay,
+.gallery__link:focus .overlay {
+  transform: translateY(0%);
+}
+
+.gallery__link {
+  display: block;
+  transition: box-shadow var(--transformation-time) var(--time-allocation-function);
+}
+
+.gallery__link:hover, .gallery__link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /*# sourceMappingURL=main.css.map */
