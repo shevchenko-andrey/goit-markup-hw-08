@@ -1,14 +1,16 @@
 .checkbox-field {
-  @include flex-center();
+  display: flex;
+  align-items: center;
   margin-bottom: 30px;
   cursor: pointer;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  @include font(12px, 400, 14px);
   letter-spacing: 0.03em;
   color: #757575;
+  letter-spacing: 0.03em;
+  color: #757575;
+
   &::before {
-    display: block;
+    display: inline-block;
     content: "";
     width: 15px;
     height: 15px;
@@ -27,6 +29,7 @@
     text-decoration-line: underline;
     color: var(--accent-color);
     @media screen and (max-width: 1199px) {
+      max-width: 370px;
       @include font(12px, 400, 14px);
     }
   }
