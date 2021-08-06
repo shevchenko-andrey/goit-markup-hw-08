@@ -1163,6 +1163,13 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal {
+    max-width: 450px;
+    max-height: 609px;
+  }
+}
+
 .modal__close-btn {
   cursor: pointer;
   position: absolute;
@@ -1187,6 +1194,174 @@ body {
 
 .modal__close-btn:active {
   box-shadow: 0px 2px 1px 0px #7e5a5a33, 0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
+}
+
+.modal-form {
+  padding: 40px;
+  overflow: scroll;
+}
+
+.modal-form__head {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: var(--master-leter-spacing);
+  color: #212121;
+}
+
+.modal-form__field {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.modal-form__wraper {
+  display: block;
+  position: relative;
+}
+
+.modal-form__data-input {
+  display: block;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  padding-left: 42px;
+  outline: none;
+  cursor: pointer;
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: border-color var(--transformation-time) var(--time-allocation-function), fill var(--transformation-time) var(--time-allocation-function);
+}
+
+.modal-form__data-input:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-form__icon {
+  position: absolute;
+  bottom: 50%;
+  left: 15px;
+  transform: translateY(50%);
+}
+
+.modal-form__data-input:focus + .modal-form__icon {
+  fill: var(--accent-color);
+}
+
+.modal-form__message {
+  padding: 12px 16px;
+  outline: none;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: block;
+  resize: none;
+  width: 100%;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #212121;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color var(--transformation-time) var(--time-allocation-function);
+}
+
+.modal-form__message::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form__message:focus {
+  border-color: var(--accent-color);
+}
+
+.modal-form__button {
+  display: block;
+  padding: 10px 55px;
+  margin: 0 auto;
+  background: var(--accent-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  transition: background-color var(--transformation-time) var(--time-allocation-function), box-shadow var(--transformation-time) var(--time-allocation-function);
+  letter-spacing: 0.06em;
+  color: var(--secondary-text-color);
+}
+
+.modal-form__button:hover, .modal-form__button:focus {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.checkbox-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  color: #757575;
+}
+
+.checkbox-field::before {
+  display: block;
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 8px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+  transition: border var(--transformation-time) var(--time-allocation-function), background-image var(--transformation-time) var(--time-allocation-function);
+}
+
+.checkbox-field__link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: var(--master-leter-spacing);
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.checkbox:focus + .checkbox-field::before {
+  border-color: var(--accent-color);
+}
+
+.checkbox:checked + .checkbox-field::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/checkbox/checkbox-on.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
+  object-fit: cover;
+  border: 2px solid rgba(33, 33, 33, 0);
+}
+
+.checkbox {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
 }
 
 .filter {
