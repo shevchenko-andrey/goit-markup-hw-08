@@ -4,12 +4,13 @@
 
   &__head {
     margin-bottom: 12px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
+    @include font(20px, 700, 30px);
     text-align: center;
     letter-spacing: var(--master-leter-spacing);
     color: #212121;
+    @media screen and (min-width: 1200px) {
+      @include font(20px, 700, 23px);
+    }
   }
   &__field {
     font-weight: 400;

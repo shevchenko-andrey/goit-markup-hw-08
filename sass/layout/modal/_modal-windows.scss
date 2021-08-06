@@ -8,20 +8,24 @@
   transition: opacity var(--transformation-time) var(--time-allocation-function),
     visibility var(--transformation-time) var(--time-allocation-function);
 }
+
 .modal {
+  overflow: scroll;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
   background-color: var(--secondary-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   @media screen and (max-width: 1199px) {
-    max-width: 450px;
-    max-height: 609px;
+    min-width: 450px;
+    min-height: 609px;
+  }
+  @media screen and (max-width: 1200px) {
+    min-width: 528px;
+    min-height: 581px;
   }
 }
 .modal__close-btn {
