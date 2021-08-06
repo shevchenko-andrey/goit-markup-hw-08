@@ -7,10 +7,10 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity var(--transformation-time) var(--time-allocation-function),
     visibility var(--transformation-time) var(--time-allocation-function);
+  overflow: scroll;
 }
 
 .modal {
-  overflow: scroll;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -19,9 +19,11 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+
   @media screen and (max-width: 1199px) {
-    min-width: 450px;
+    max-width: 450px;
     min-height: 609px;
+    @include flex-center();
   }
   @media screen and (max-width: 1200px) {
     min-width: 528px;

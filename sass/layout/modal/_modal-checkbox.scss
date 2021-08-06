@@ -22,12 +22,13 @@
         var(--time-allocation-function);
   }
   &__link {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
+    @include font(14px, 400, 24px);
     letter-spacing: var(--master-leter-spacing);
     text-decoration-line: underline;
     color: var(--accent-color);
+    @media screen and (max-width: 1199px) {
+      @include font(12px, 400, 14px);
+    }
   }
   .checkbox:focus + &::before {
     border-color: var(--accent-color);
