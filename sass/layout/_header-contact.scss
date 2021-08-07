@@ -1,13 +1,15 @@
 .contact {
   margin-left: auto;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  @include font(14px, 500, 16px);
   letter-spacing: 0.02em;
   @media screen and (max-width: 767px) {
     display: none;
   }
+  @media screen and (min-width: 768px) {
+    @include font(12px, 500, 14px);
+  }
   @media screen and (min-width: 1200px) {
+    @include font(14px, 500, 16px);
     @include flex-center();
   }
 

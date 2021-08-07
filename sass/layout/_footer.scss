@@ -9,21 +9,23 @@
     @media screen and (min-width: 768px) {
       display: flex;
       flex-wrap: wrap;
+      justify-content: space-between;
       text-align: center;
     }
     @media screen and (min-width: 1200px) {
       margin: 0 auto;
-      text-align: start;
+      justify-content: start;
+      text-align: left;
     }
   }
   &__address-container {
-    @media screen and (max-width: 767px) {
-      text-align: center;
-    }
-    @media screen and (min-width: 768px) {
+    @media screen and (max-width: 768px) {
+      margin-bottom: 60px;
       margin-left: 61px;
     }
-    @media screen and (min-width: 1200px) {
+    @media screen and (max-width: 767px) {
+      text-align: center;
+      margin-bottom: 60px;
       margin-left: 0;
     }
   }
