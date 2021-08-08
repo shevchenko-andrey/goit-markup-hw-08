@@ -1,5 +1,5 @@
 .footer-form {
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     text-align: center;
   }
   @media screen and(min-width: 768px) and (max-width: 1199px) {
@@ -10,7 +10,6 @@
   @media screen and (min-width: 1200px) {
     max-height: 86px;
     display: block;
-    margin-left: 93px;
     margin-top: 12px;
   }
 
