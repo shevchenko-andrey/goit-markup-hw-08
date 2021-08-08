@@ -504,12 +504,12 @@ body {
   color: var(--accent-color);
 }
 
-.contacts--mobile__item {
-  margin-bottom: 32px;
+.contacts--mobile {
+  margin-bottom: 64px;
 }
 
-.contacts--mobile__item:last-child {
-  margin-bottom: 64px;
+.contacts--mobile__item:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contacts--mobile__link {
