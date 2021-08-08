@@ -900,7 +900,7 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer__address-container {
     margin-bottom: 60px;
     margin-left: 61px;
@@ -985,13 +985,14 @@ body {
 
 @media screen and (max-width: 768px) {
   .footer-form {
-    margin: 0 auto;
+    text-align: center;
   }
 }
 
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .footer-form {
     text-align: center;
+    margin: 0 auto;
   }
 }
 

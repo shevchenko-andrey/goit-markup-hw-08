@@ -19,7 +19,7 @@
     }
   }
   &__address-container {
-    @media screen and (max-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
       margin-bottom: 60px;
       margin-left: 61px;
     }
